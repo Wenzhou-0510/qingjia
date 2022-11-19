@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="utf-8">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
+    <title>疫情期间学生离校审批</title>
+    <!-- 引入样式 -->
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        body {
+            border: 0;
+            position: relative;
+            margin: 0;
+            font-size: 15px;
+            height: 100%;
+        }
+        
+        .line {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .font {
+            color: #898989;
+        }
+        
+        .hr {
+            border: 0;
+            background-color: rgb(232, 232, 232);
+            margin-top: -5px;
+            height: 1px;
+        }
+        
+        .div {
+            padding: 0px 20px;
+        }
+    </style>
+
+    <body>
+        <div id="app">
+            <div class="div">
+                <p style="color: red;">已关闭</p>
+                <p class="line">
+                    <span class="font">工单编号</span>
+                    <span>{{orderId}}</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">创建人</span>
+                    <span>周稳</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">部门</span>
+                    <span>19软工1</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">处理人</span>
+                    <span></span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">申请时间</span>
+                    <span>{{orderTm}}</span>
+                </p>
+            </div>
+            <p style="background-color: rgb(209, 209, 209);font-weight: bold;line-height: 30px;margin: 0;padding-left: 10px">申请人信息</p>
+            <div class="div">
+                <p class="line">
+                    <span class="font">学号</span>
+                    <span>1921230045</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">姓名</span>
+                    <span>周稳</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">联系电话</span>
+                    <span>18768509725</span>
+                    <img src="./phone.png" style="width: 15px;height: 15px;margin-left: -110px;">
+                    <img src="./right.png" style="width: 15px;height: 15px;margin-left: -130px;">
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">学院</span>
+                    <span>金融与信息学院</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">班级</span>
+                    <span>19软工1</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">专业</span>
+                    <span>软件工程</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">年纪</span>
+                    <span>2019</span>
+                </p>
+            </div>
+            <p style="background-color: rgb(209, 209, 209);font-weight: bold;line-height: 30px;margin: 0;padding-left: 10px">寝室信息</p>
+            <div class="div">
+                <p class="line">
+                    <span class="font">校区</span>
+                    <span>本部校区</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">楼号</span>
+                    <span>南宿3</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">寝室号</span>
+                    <span>202</span>
+                </p>
+            </div>
+            <p style="background-color: rgb(209, 209, 209);font-weight: bold;line-height: 30px;margin: 0;padding-left: 10px;">请假信息</p>
+            <div class="div">
+                <p class="line">
+                    <span class="font">请假类别</span>
+                    <span>事假</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">是否出省</span>
+                    <span>否</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">目的地范围</span>
+                    <span>宁波大市区</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">前往目的地</span>
+                    <span>宁波银行数据中心</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">省份</span>
+                    <span>浙江省</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">城市</span>
+                    <span>宁波市</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">区县</span>
+                    <span>海曙区</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">请假开始时间</span>
+                    <span>{{beginTm}}</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">请假结束时间</span>
+                    <span>{{afterTm}}</span>
+                    <hr class="hr">
+                </p>
+                <p class="line">
+                    <span class="font">天数</span>
+                    <span>{{day}}</span>
+                </p>
+            </div>
+            <hr style="background-color: rgb(231 231 231);height: 20px;border: 0px;"></hr>
+            <div class="div">
+                <p class="line">
+                    <span class="font">请假事由</span>
+                    <hr class="hr">
+                    <span>实习工作<br><br><br></span>
+                </p>
+            </div>
+            <hr style="background-color: rgb(231 231 231);height: 20px;border: 0px;"></hr>
+            <img src="./zuozhengcailiao.png" style="width: 100%;" />
+            <hr style="background-color: rgb(231 231 231);height: 20px;border: 0px;"></hr>
+            <div class="div">
+                <p class="line">
+                    <span>审批记录</span>
+                </p>
+            </div>
+            <hr class="hr">
+            <div style="position: relative;">
+                <span class="font" style="position: relative;float: right;margin-right: 20px;">{{shenpiTm}}</span>
+                <img src="./shenpijilu.png" style="width: 100%;margin-top:-27px;">
+            </div>
+            <hr style="background-color: rgb(231 231 231);height: 20px;border: 0px;"></hr>
+            <el-tabs v-model="activeName" @tab-click="handleClick">
+                <hr style="margin-left: -40px;" class="hr">
+                <el-tab-pane label="评论" name="first">
+                    <img src="./1.png" style="width: 100%;">
+                </el-tab-pane>
+                <el-tab-pane label="活动记录" name="second">
+                    <span class="font" style="position: absolute;margin-left: 58px;margin-top: 12px;">{{shenpiTm}}</span>
+                    <span class="font" style="position: absolute;margin-left: 58px;margin-top: 73px;">{{orderTm}}</span>
+                    <img src="./2.png" style="width: 100%;scale: 1.1;">
+                </el-tab-pane>
+                <el-tab-pane label="流程图" name="third">
+                    <img src="./3.png" style="width: 100%;">
+                </el-tab-pane>
+                <el-tab-pane label="抄送记录" name="fourth">
+                    <img src="./4.png" style="width: 100%;">
+                </el-tab-pane>
+            </el-tabs>
+        </div>
+    </body>
+    <!-- import Vue before Element -->
+    <script src="https://unpkg.com/vue@2/dist/vue.js"></script>
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+        new Vue({
+            el: '#app',
+            data: function() {
+                return {
+                    activeName: 'second',
+                    day: '1',
+                }
+            },
+            computed: {
+                orderTm: function() {
+                    return this.create('-') + ' 07:13'
+                },
+                orderId: function() {
+                    let time = this.create('').substring(2)
+                    return 'RE' + time + '000161'
+                },
+                beginTm: function() {
+                    let time = this.create('/')
+                    return time + ' 07:00'
+                },
+                afterTm: function() {
+                    let time = this.create('/')
+                    return time + ' 21:00'
+                },
+                shenpiTm: function() {
+                    return this.create('-') + ' 07:23'
+                },
+            },
+            mounted() {
+                this.create()
+            },
+            methods: {
+                handleClick(tab, event) {
+                    console.log(tab, event);
+                },
+                create(str) {
+                    let date = new Date();
+                    var year = date.getFullYear()
+                    let month = date.getMonth() + 1
+                    let day = date.getDate()
+                    let time = year + str + month + str + day
+                    return time
+                }
+            }
+        })
+    </script>
+
+</html>
